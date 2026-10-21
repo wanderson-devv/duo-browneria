@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { MessageCircle, ArrowDown } from "lucide-react";
 import heroImg from "../assets/brownie-recheado.jpg";
+import logo from "../assets/logo-duo.png";
 import { ORDER_MESSAGE, whatsappUrl } from "../lib/brand";
 import { WavyPattern } from "./Decor";
 
@@ -41,22 +42,28 @@ export function Hero() {
             100% Artesanal
           </motion.p>
 
-          <motion.h1
-            variants={item}
-            className="text-balance text-4xl leading-[1.08] font-extrabold text-chocolate sm:text-5xl lg:text-6xl"
-          >
-            Brownies que nasceram de uma{" "}
-            <span className="text-terracotta">história de amor</span>
+          <motion.h1 variants={item}>
+            <span className="sr-only">
+              Duo Browneria — brownies artesanais em Maceió
+            </span>
+            <img
+              src={logo}
+              alt=""
+              width={1080}
+              height={529}
+              aria-hidden="true"
+              className="h-24 w-auto md:h-32"
+            />
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-5 max-w-md text-lg leading-relaxed text-chocolate/75"
+            className="mt-6 max-w-md text-xl leading-relaxed text-chocolate/75"
           >
-            Começamos na praia de Maceió, com o propósito do nosso casamento.
-            Hoje somos a <strong className="font-bold">Duo Browneria</strong> —
-            brownies artesanais em ~30 pontos de revenda e encomendas especiais
-            para os seus momentos.
+            Brownies artesanais com{" "}
+            <strong className="font-bold text-chocolate">recheio generoso</strong>,
+            feitos à mão em Maceió. Brigadeiro, Ninho, Doce de Leite e Nutella —
+            para você, para presentear ou para dividir.
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -64,14 +71,14 @@ export function Hero() {
               href={whatsappUrl(ORDER_MESSAGE)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2.5 rounded-full bg-terracotta px-7 py-4 text-base font-bold text-cream-soft shadow-lg shadow-terracotta/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-chocolate hover:shadow-xl hover:shadow-chocolate/25"
+              className="group flex items-center justify-center gap-2.5 rounded-full bg-terracotta px-7 py-4 text-lg font-bold text-cream-soft shadow-lg shadow-terracotta/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-chocolate hover:shadow-xl hover:shadow-chocolate/25"
             >
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               Fazer uma encomenda
             </a>
             <a
               href="#sabores"
-              className="flex items-center justify-center gap-2 rounded-full border-2 border-chocolate/20 px-7 py-4 text-base font-bold text-chocolate transition-all duration-300 hover:border-chocolate hover:bg-chocolate hover:text-cream-soft"
+              className="flex items-center justify-center gap-2 rounded-full border-2 border-chocolate/20 px-7 py-4 text-lg font-bold text-chocolate transition-all duration-300 hover:border-chocolate hover:bg-chocolate hover:text-cream-soft"
             >
               Conhecer os sabores
               <ArrowDown className="h-4 w-4" aria-hidden="true" />

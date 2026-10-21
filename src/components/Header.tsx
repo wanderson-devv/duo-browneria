@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "../assets/logo-duo.png";
-import { BRAND, ORDER_MESSAGE, whatsappUrl } from "../lib/brand";
+import { ORDER_MESSAGE, whatsappUrl } from "../lib/brand";
 
 const NAV = [
   { href: "#sabores", label: "Sabores" },
@@ -40,31 +40,16 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
         <a
           href="#topo"
-          className="group flex items-center gap-3 transition-transform duration-300 hover:scale-[1.03] md:gap-4"
+          className="flex items-center transition-transform duration-300 hover:scale-[1.03]"
           aria-label="Duo Browneria — início"
         >
-          <span
-            className="block h-9 overflow-hidden rounded-md md:h-12"
-            style={{ aspectRatio: "1080 / 424" }}
-            aria-hidden="true"
-          >
-            <img
-              src={logo}
-              alt=""
-              width={1080}
-              height={529}
-              className="h-full w-full object-cover object-top"
-            />
-          </span>
-          <span
-            className="flex flex-col justify-center leading-none"
-            aria-hidden="true"
-          >
-            <span className="text-[13px] font-extrabold tracking-[0.32em] text-chocolate md:text-base">
-              BROWNERIA
-            </span>
-          </span>
-          <span className="sr-only">{BRAND.name}</span>
+          <img
+            src={logo}
+            alt="Duo Browneria"
+            width={1080}
+            height={529}
+            className="h-10 w-auto md:h-14"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">

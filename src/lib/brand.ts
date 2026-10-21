@@ -41,26 +41,3 @@ export const FLAVORS = [
     accent: "#8B5A2B",
   },
 ] as const;
-
-export const TIMELINE = [
-  {
-    year: "2022",
-    title: "Tudo começou na praia",
-    text: "Com o propósito do nosso casamento, vendíamos os brownies na praia de Maceió.",
-  },
-  {
-    year: "2022+",
-    title: "Do altar para o delivery",
-    text: "Depois de casarmos, começamos a fazer brownies para delivery — além das vendas na praia.",
-  },
-  {
-    year: "2023",
-    title: "O sonho da revenda",
-    text: "Planejamos trabalhar com brownies para revenda. Em novembro, conquistamos nossos dois primeiros restaurantes parceiros.",
-  },
-  {
-    year: "Hoje",
-    title: "~30 pontos em Maceió",
-    text: "Cerca de 30 pontos de revenda espalhados em Maceió e cidades circunvizinhas — e muito mais por vir.",
-  },
-] as const;
