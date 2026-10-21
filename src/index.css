@@ -46,6 +46,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -64,6 +65,7 @@
 
   body {
     @apply bg-cream-soft text-espresso antialiased;
+    overflow-x: clip;
   }
 
   ::selection {

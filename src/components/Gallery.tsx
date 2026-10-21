@@ -50,20 +50,24 @@ export function Gallery() {
           whileInView="visible"
           viewport={viewport}
           variants={stagger}
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
+          className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5"
         >
           {PHOTOS.map((photo, i) => (
             <motion.figure
               key={photo.alt}
               variants={scaleIn}
               transition={{ delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-[2rem] bg-cream shadow-[0_2px_20px_rgba(90,48,24,0.08)] transition-shadow duration-400 hover:shadow-[0_8px_32px_rgba(90,48,24,0.14)]"
+              className={`group relative overflow-hidden rounded-[1.5rem] bg-cream shadow-[0_2px_20px_rgba(90,48,24,0.08)] transition-shadow duration-400 hover:shadow-[0_8px_32px_rgba(90,48,24,0.14)] md:rounded-[2rem] ${
+                i === 2 ? "col-span-2 md:col-span-1" : ""
+              }`}
             >
               <img
                 src={photo.src}
                 alt={photo.alt}
                 loading="lazy"
-                className="aspect-[3/4] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${
+                  i === 2 ? "aspect-[16/9] md:aspect-[3/4]" : "aspect-[3/4]"
+                }`}
               />
             </motion.figure>
           ))}

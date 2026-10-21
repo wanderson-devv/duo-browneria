@@ -4,7 +4,7 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 
 export function Story() {
   return (
-    <section id="historia" className="bg-cream py-20 md:py-28">
+    <section id="historia" className="overflow-hidden bg-cream py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-6">
           <motion.div

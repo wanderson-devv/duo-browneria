@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <section
       id="topo"
-      className="relative overflow-hidden bg-cream pb-16 pt-28 md:pb-24 md:pt-36"
+      className="relative overflow-hidden bg-cream pb-16 pt-24 md:pb-24 md:pt-36"
     >
       <WavyPattern className="pointer-events-none absolute -right-20 -top-16 h-72 w-72 text-amber/15 md:h-96 md:w-96" />
       <WavyPattern className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 text-terracotta/10 md:h-80 md:w-80" />
@@ -52,7 +52,7 @@ export function Hero() {
               width={1080}
               height={529}
               aria-hidden="true"
-              className="h-24 w-auto md:h-32"
+              className="h-20 w-auto sm:h-24 md:h-32"
             />
           </motion.h1>
 
@@ -66,7 +66,7 @@ export function Hero() {
             para você, para presentear ou para dividir.
           </motion.p>
 
-          <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <motion.div variants={item} className="mt-8 flex flex-col gap-3 lg:flex-row">
             <a
               href={whatsappUrl(ORDER_MESSAGE)}
               target="_blank"
